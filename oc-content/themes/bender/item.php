@@ -110,6 +110,11 @@
                     <?php } ?>
                 </div>
             <?php } ?>
+
+            <div id="note-under-description">
+            	Please mention that you found this ad on Kachehribazar.com.pk when you contact me. <br/>
+            </div>
+            
         </div>
         <?php osc_run_hook('item_detail', osc_item() ); ?>
         <p class="contact_button">
@@ -125,6 +130,7 @@
         <?php osc_run_hook('location'); ?>
     </div>
     <!-- plugins -->
+    <?php /* ?>
     <div id="useful_info" class="bordered-box">
         <h2><?php _e('Useful information', 'bender'); ?></h2>
         <ul>
@@ -134,7 +140,7 @@
             <li><?php _e('This site is never involved in any transaction, and does not handle payments, shipping, guarantee transactions, provide escrow services, or offer "buyer protection" or "seller certification"', 'bender'); ?></li>
         </ul>
     </div>
-
+	<?php */ ?>
         <?php related_listings(); ?>
         <?php if( osc_count_items() > 0 ) { ?>
         <div class="similar_ads">
@@ -191,12 +197,14 @@
                                         <?php CommentForm::author_input_text(); ?>
                                     </div>
                                 </div>
+                                <?php /* ?>
                                 <div class="control-group">
                                     <label class="control-label" for="authorEmail"><?php _e('Your e-mail', 'bender'); ?></label>
                                     <div class="controls">
                                         <?php CommentForm::email_input_text(); ?>
                                     </div>
                                 </div>
+                                <?php */ ?>
                             <?php }; ?>
                             <div class="control-group">
                                 <label class="control-label" for="title"><?php _e('Title', 'bender'); ?></label>
