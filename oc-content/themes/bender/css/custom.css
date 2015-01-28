@@ -8,6 +8,7 @@
     margin-top: 5px;
 }
 .listing-grid .listing-card {
+    min-height: 265px;
     -webkit-transition: border 500ms ease-out;
     -moz-transition: border 500ms ease-out;
     -o-transition: border 500ms ease-out;
@@ -23,7 +24,7 @@ ul.r-list li a, ul.r-list li span {
     font-size: 12px;
 }
 #header .nav li a, #header .nav li span {
-    font-size: 12px;
+    font-size: 14px;
 }
 #sidebar h3 {
     font-size: 14px;
@@ -33,4 +34,56 @@ ul.r-list li a, ul.r-list li span {
 }
 ul.breadcrumb li {
     font-size: 12px;
+}
+body.home .r-list {
+    width: 100%
+}
+body.home .cell_3 {
+    width: 100%
+}
+ul.r-list li ul li {
+	    
+    float: left;
+    padding: 4px;
+    min-height: 70px;
+}
+ul.r-list li ul li a {
+	display:table-cell;
+    font-size: 13px;
+	height: 80px;
+	vertical-align: middle;
+	width: 117px;
+    word-wrap: normal;
+    display: table-cell;
+    text-align: center;
+    white-space: pre-wrap;
+    /* css-3 */
+    
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
+    
+    border: 1px solid #ECECEC;
+    -webkit-transition: border 500ms ease-out;
+    -moz-transition: border 500ms ease-out;
+    -o-transition: border 500ms ease-out;
+    transition: border 500ms ease-out;
+}
+ul.r-list li ul li a:hover {
+    border: 1px solid #35c3d9;
+}
+ul.r-list li ul li span {
+    display: none;
+}
+ul.r-list li h1 a {
+    font-size: 24px;
+    line-height: 30px;
 }
