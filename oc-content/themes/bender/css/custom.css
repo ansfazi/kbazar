@@ -1,0 +1,36 @@
+.listing-card .listing-attributes {
+    font-size: 12px;
+    color: #777;
+    padding: 4px 0 8px;
+    line-height: 1em
+}
+.listing-card .currency-value {
+    margin-top: 5px;
+}
+.listing-grid .listing-card {
+    -webkit-transition: border 500ms ease-out;
+    -moz-transition: border 500ms ease-out;
+    -o-transition: border 500ms ease-out;
+    transition: border 500ms ease-out;
+}
+.listing-grid .listing-card:hover {
+    border: 1px solid #35c3d9;
+}
+ul.r-list li a, ul.r-list li span {
+    font-size: 12px;
+}
+#footer {
+    font-size: 12px;
+}
+#header .nav li a, #header .nav li span {
+    font-size: 12px;
+}
+#sidebar h3 {
+    font-size: 14px;
+}
+#sidebar fieldset {
+    font-size: 12px;
+}
+ul.breadcrumb li {
+    font-size: 12px;
+}
