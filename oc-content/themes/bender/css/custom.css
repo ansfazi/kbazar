@@ -88,7 +88,11 @@ ul.r-list li h1 a {
     line-height: 30px;
 }
 
-.note-under-description {
+#note-under-description {
 	font-style:italic;
-	color:#999;
+	color: #000;
+}
+
+#sidebar button{
+    font-size: 15px;
 }

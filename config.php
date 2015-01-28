@@ -22,7 +22,7 @@ if ( $_SERVER['HTTP_HOST']  == 'kachehribazar.com'){
 	define('DB_USER', 'root');
 
 	/** MySQL database password */
-	define('DB_PASSWORD', 'confiz');
+	define('DB_PASSWORD', '');
 
 	define('WEB_PATH', 'http://localhost/kbazar/');
 }
@@ -33,7 +33,7 @@ if ( $_SERVER['HTTP_HOST']  == 'kachehribazar.com'){
 /** Database Table prefix */
 define('DB_TABLE_PREFIX', 'z_');
 
-define('REL_WEB_URL', '/');
+define('REL_WEB_URL', '/kbazar/');
 
 
 

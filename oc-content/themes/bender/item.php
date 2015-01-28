@@ -112,7 +112,7 @@
             <?php } ?>
 
             <div id="note-under-description">
-            	Please mention that you found this ad on Kachehribazar.com.pk when you contact me. <br/>
+            	<strong> Note : </strong>Please mention that you found this ad on Kachehribazar.com.pk when you contact me. <br/>
             </div>
             
         </div>
