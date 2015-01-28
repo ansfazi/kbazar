@@ -1,0 +1,21 @@
+[24-Jan-2015 09:18:33 UTC] PHP Warning:  Unterminated comment starting line 64 in /home/upetzqcs/public_html/kachehribazar.com/sc/url_scraper.php on line 64
+[24-Jan-2015 09:21:01 UTC] PHP Warning:  Unterminated comment starting line 64 in /home/upetzqcs/public_html/kachehribazar.com/sc/url_scraper.php on line 64
+[24-Jan-2015 09:21:33 UTC] PHP Warning:  Unterminated comment starting line 64 in /home/upetzqcs/public_html/kachehribazar.com/sc/url_scraper.php on line 64
+[24-Jan-2015 09:21:34 UTC] PHP Warning:  Unterminated comment starting line 64 in /home/upetzqcs/public_html/kachehribazar.com/sc/url_scraper.php on line 64
+[24-Jan-2015 09:23:08 UTC] PHP Warning:  ini_set() has been disabled for security reasons in /home/upetzqcs/public_html/kachehribazar.com/sc/scrape.php on line 10
+[24-Jan-2015 09:23:23 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/upetzqcs/public_html/kachehribazar.com/sc/scrape.php on line 45
+[24-Jan-2015 09:24:31 UTC] PHP Warning:  ini_set() has been disabled for security reasons in /home/upetzqcs/public_html/kachehribazar.com/sc/scrape.php on line 6
+[24-Jan-2015 09:24:46 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/upetzqcs/public_html/kachehribazar.com/sc/scrape.php on line 41
+[24-Jan-2015 09:24:49 UTC] PHP Warning:  ini_set() has been disabled for security reasons in /home/upetzqcs/public_html/kachehribazar.com/sc/scrape.php on line 6
+[24-Jan-2015 09:24:51 UTC] PHP Warning:  ini_set() has been disabled for security reasons in /home/upetzqcs/public_html/kachehribazar.com/sc/scrape.php on line 6
+[24-Jan-2015 10:53:30 UTC] PHP Warning:  ini_set() has been disabled for security reasons in /home/upetzqcs/public_html/kachehribazar.com/sc/scrape.php on line 6
+[24-Jan-2015 19:02:08 UTC] PHP Warning:  phpinfo() has been disabled for security reasons in /home/upetzqcs/public_html/kachehribazar.com/sc/info.php on line 1
+[24-Jan-2015 19:06:24 UTC] PHP Warning:  ini_set() has been disabled for security reasons in /home/upetzqcs/public_html/kachehribazar.com/sc/scrape.php on line 6
+[26-Jan-2015 06:23:55 UTC] PHP Warning:  file_get_contents(http://olx.com.pk/item/i-phone-5-f-u-white-silver-or-exchange-possible-IDSAEX5.html#818a4d5496): failed to open stream: Connection timed out in /home/upetzqcs/public_html/kachehribazar.com/sc/simple_html_dom.php on line 76
+[26-Jan-2015 10:32:53 UTC] PHP Warning:  Unterminated comment starting line 64 in /home/upetzqcs/public_html/kachehribazar.com/sc/url_scraper.php on line 64
+[26-Jan-2015 10:36:26 UTC] PHP Warning:  file_get_contents(http://olx.com.pk/item/i-phone-5-f-u-white-silver-or-exchange-possible-IDSAEX5.html#818a4d5496): failed to open stream: Connection timed out in /home/upetzqcs/public_html/kachehribazar.com/sc/simple_html_dom.php on line 76
+[26-Jan-2015 17:27:05 UTC] PHP Warning:  file_get_contents(http://olx.com.pk/item/i-phone-5-f-u-white-silver-or-exchange-possible-IDSAEX5.html#818a4d5496): failed to open stream: Connection timed out in /home/upetzqcs/public_html/kachehribazar.com/sc/simple_html_dom.php on line 76
+[26-Jan-2015 17:27:32 UTC] PHP Warning:  file_get_contents(http://olx.com.pk/item/i-phone-5-f-u-white-silver-or-exchange-possible-IDSAEX5.html#818a4d5496): failed to open stream: Connection timed out in /home/upetzqcs/public_html/kachehribazar.com/sc/simple_html_dom.php on line 76
+[26-Jan-2015 17:38:43 UTC] PHP Warning:  file_get_contents(http://olx.com.pk/item/i-phone-5-f-u-white-silver-or-exchange-possible-IDSAEX5.html#818a4d5496): failed to open stream: Connection timed out in /home/upetzqcs/public_html/kachehribazar.com/sc/simple_html_dom.php on line 76
+[26-Jan-2015 17:42:20 UTC] PHP Warning:  file_get_contents(http://olx.com.pk/item/i-phone-5-f-u-white-silver-or-exchange-possible-IDSAEX5.html#818a4d5496): failed to open stream: Connection timed out in /home/upetzqcs/public_html/kachehribazar.com/sc/simple_html_dom.php on line 76
+[26-Jan-2015 17:45:27 UTC] PHP Warning:  file_get_contents(http://olx.com.pk/item/i-phone-5-f-u-white-silver-or-exchange-possible-IDSAEX5.html#818a4d5496): failed to open stream: Connection timed out in /home/upetzqcs/public_html/kachehribazar.com/sc/simple_html_dom.php on line 76
