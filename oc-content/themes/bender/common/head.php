@@ -74,4 +74,5 @@
     bender.fancybox_closeBtn = '<?php echo osc_esc_js( __('Close','bender')) ?>';
 </script>
 <link href="<?php echo osc_current_web_theme_url('css/main.css') ; ?>" rel="stylesheet" type="text/css" />
+<link href="<?php echo osc_current_web_theme_url('css/custom.css') ; ?>" rel="stylesheet" type="text/css" />
 <?php osc_run_hook('header') ; ?>
