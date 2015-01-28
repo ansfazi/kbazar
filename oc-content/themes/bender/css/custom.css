@@ -87,3 +87,8 @@ ul.r-list li h1 a {
     font-size: 24px;
     line-height: 30px;
 }
+
+.note-under-description {
+	font-style:italic;
+	color:#999;
+}
