@@ -96,3 +96,69 @@ ul.r-list li h1 a {
 #sidebar button{
     font-size: 15px;
 }
+
+#logo a img{
+    height: 35px;
+}
+
+.main-search {
+    background-color: transparent !important; 
+    background-image: none !important; 
+    padding: 0px; 
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#header #logo{
+    margin-left: 6px;
+}
+
+#header .nav{
+    margin-right: 10px;
+}
+
+#logo a img{
+height:35px;
+}
+
+.main-search {
+background-color: transparent !important; 
+background-image: none !important; 
+padding: 0px; 
+border: none !important;
+box-shadow: none !important;
+}
+
+.main-search .ui-button {
+background-color: #093D45 !important;
+background-image: -webkit-linear-gradient(top, #03DDFF,#0D8BA0) !important;
+background-image: -moz-linear-gradient(top, #35c3d9,#18a7be) !important;
+background-image: -ms-linear-gradient(top, #35c3d9,#18a7be) !important;
+background-image: -o-linear-gradient(top, #35c3d9,#18a7be) !important;
+border: solid 1px #14889B !important;
+}
+
+.main-search input {
+  background-color:#FFF !important;
+  font-size:20px !important;
+}
+.select-box select{
+font-size:16px
+}
+
+.select-box select option{
+padding-top:10px !important;
+padding-bottom:10px !important;
+}
+
+.select-box {
+background: #FFF !important;
+font-size:18px !important;
+}
+.main-search .has-placeholder {
+    font-size: 20px !important;
+}
+
+#header #logo span {
+font-size: 18px !important !important;
+}
