@@ -1,220 +1,213 @@
-bender.extend = function(el, opt) {
-        for (var name in opt) el[name] = opt[name];
-        return el;
-}
-bender.responsive = function(options) {
-    defaults = {'selector':'#responsive-trigger'};
-    options = $.extend(defaults, options);
-    if($(options.selector).is(':visible')){
-        return true;
-    }
-    return false;
-}
-bender.toggleClass = function(element,destination,isObject) {
-    var $selector = $('['+element+']');
-    $selector.click(function (event) {
-        var thatClass  = $(this).attr(element);
-        var thatDestination;
-        if (typeof(isObject) != "undefined"){
-            var thatDestination  = $(destination);
-        } else {
-            var thatDestination  = $($(this).attr(destination));
+var myDropzone;
+
+Dropzone.options.myDropzone = {
+	init: function() {
+	  this.on("addedfile", function(file) {
+
+	    // Create the remove button
+	    var removeButton = Dropzone.createElement("<button class='btn btn-dropzone'>Remove file</button>");
+	    
+
+	    // Capture the Dropzone instance as closure.
+	    var _this = this;
+
+	    // Listen to the click event
+	    removeButton.addEventListener("click", function(e) {
+	      // Make sure the button click doesn't submit the form:
+	      e.preventDefault();
+	      e.stopPropagation();
+
+	      // Remove the file preview.
+	      _this.removeFile(file);
+	      // If you want to the delete the file on the server as well,
+	      // you can do the AJAX request here.
+	    });
+
+	    // Add the button to the file preview element.
+	    file.previewElement.appendChild(removeButton);
+	  });
+	}
+};
+
+/**************************
+*
+*	EXT - for the quotes
+*
+**************************/
+(function($){
+	$.fn.extend({ 
+        //plugin name - rotaterator
+        rotaterator: function(options) {
+
+        	var defaults = {
+        		fadeSpeed: 600,
+        		pauseSpeed: 100,
+        		child:null
+        	};
+
+        	var options = $.extend(defaults, options);
+
+        	return this.each(function() {
+        		var o =options;
+        		var obj = $(this);                
+        		var items = $(obj.children(), obj);
+        		items.each(function() {$(this).hide();})
+        		if(!o.child){var next = $(obj).children(':first');
+        	}else{var next = o.child;
+        	}
+        	$(next).fadeIn(o.fadeSpeed, function() {
+        		$(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
+        			var next = $(this).next();
+        			if (next.length == 0){
+        				next = $(obj).children(':first');
+        			}
+        			$(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
+        		})
+        	});
+        });
         }
-        thatDestination.toggleClass(thatClass);
-        event.preventDefault();
-        return;
     });
-}
-bender.photoUploader = function(selector,options) {
-    defaults = {'max':4};
-    options = $.extend(defaults, options);
-    bender.photoUploaderActions($(selector),options);
-}
-bender.addPhotoUploader = function(max) {
-    if(max < $('input[name="'+$(this).attr('name')+'"]').length+$('.photos_div').length){
-        var $image = $('<input type="file" name="photos[]">');
-            bender.photoUploaderActions(image);
-        $('#post-photos').append($image);
-    }
-}
-bender.removePhotoUploader = function() {
-    //removeAndAdd
-},
-bender.photoUploaderActions = function($element,options) {
-    $element.on('change',function(){
-        var input  = $(this)[0];
-        $(this).next('img').remove();
-        $image = $('<img />');
-        $image.insertAfter($element);
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $image.attr('src', e.target.result);
-            };
-            reader.readAsDataURL(input.files[0]);
-        } else {
-            $image.remove();
-        }
-    });
-}
+})(jQuery);
 
-function createPlaceHolder($element){
-  var $wrapper = $('<div class="has-placeholder '+$element.attr('class')+'" />');
-  $element.wrap($wrapper);
-  var $label = $('<label/>');
-      $label.append($element.attr('placeholder').replace(/^\s*/gm, ''));
-      $element.removeAttr('placeholder');
+$(function(){
 
-  $element.before($label);
-  $element.bind('remove', function() {
-        $wrapper.remove();
-    });
-}
+	//home page quotes
+	$('#quotes').rotaterator({fadeSpeed:1000, pauseSpeed:3000});
 
-function selectUi(thatSelect){
-    var uiSelect = $('<a href="#" class="select-box-trigger"></a>');
-    var uiSelectIcon = $('<span class="select-box-icon">0</span>');
-    var uiSelected = $('<span class="select-box-label">'+thatSelect.find("option:selected").text().replace(/^\s*/gm, '')+'</span>');
-    var uiWrap = $('<div class="select-box '+thatSelect.attr('class')+'" />');
+	//always activate first tab
+	$('#myTab a:eq(1)').tab('show');
 
-    thatSelect.css('filter', 'alpha(opacity=40)').css('opacity', '0');
-    thatSelect.wrap(uiWrap);
-
-
-    uiSelect.append(uiSelected).append(uiSelectIcon);
-    thatSelect.parent().append(uiSelect);
-    uiSelect.click(function(){
+    
+    //listings show more
+    $( "#more_make" ).bind( "click", function() {
+        $('#more_make_list').show();
+        $('#more_make_link').hide();
+        return false;
+    });    
+    $( "#less_make" ).bind( "click", function() {
+        $('#more_make_list').hide();
+        $('#more_make_link').show();
         return false;
     });
-    thatSelect.on('focus',function(){
-        thatSelect.parent().addClass('select-box-focus');
-    });
-    thatSelect.on('blur',function(){
-        thatSelect.parent().removeClass('select-box-focus');
-    });
-    thatSelect.change(function(){
-        str = thatSelect.find('option:selected').text().replace(/^\s*/gm, '');
-        uiSelected.text(str);
-    });
-    thatSelect.bind('removed', function() {
-        thatSelect.parent().remove();
-    });
-}
-$(document).ready(function(event){
-    //OK
-    $('.r-list h1 span').click(function(){
-        if(bender.responsive()){
-            var $parent     = $(this).parent().parent();
-            if($parent.hasClass('active')){
-                $parent.removeClass('active');
-                $(this).find('i').removeClass('fa-caret-down');
-                $(this).find('i').addClass('fa-caret-right');
-            } else {
-                $parent.addClass('active');
-                $(this).find('i').removeClass('fa-caret-right');
-                $(this).find('i').addClass('fa-caret-down');
-            }
-            return false;
-        }
-    });
-    $('.see_by').hover(function(){
-        $(this).addClass('hover');
-    },function(){
-        $(this).removeClass('hover');
-    })
-    //OK
-    bender.toggleClass('data-bclass-toggle','body',true);
-    //OK
-    /*$('.doublebutton a').click(function (event) {
-        var thisParent = $(this).parent();
-        if($(this).hasClass('grid-button')){
-            thisParent.addClass('active');
-            $('#listing-card-list').addClass('listing-grid');
-        } else {
-        thisParent.removeClass('active');
-            $('#listing-card-list').removeClass('listing-grid');
-        }
-        if (history.pushState) {
-            window.history.pushState($('title').text(), $('title').text(), $(this).prop('href'));
-        }
-        event.preventDefault();
-        return;
-    });*/
+	//the graph
+    if($("#visualization").length > 0){
 
 
-    /////// STARTS PLACE HOLDER
-    $('body').on('focus','.has-placeholder input, .has-placeholder textarea',function(){
-        var placeholder = $(this).prev();
-        var thatInput  = $(this);
-
-        if(thatInput.parents('.has-placeholder').not('.input-file')){
-            placeholder.hide();
-        }
-    });
-    $('body').on('blur','.has-placeholder input, .has-placeholder textarea',function(){
-        var placeholder = $(this).prev();
-        var thatInput  = $(this);
-
-        if(thatInput.parents('.has-placeholder').not('.input-file')){
-            if(thatInput.val() == '') {
-                placeholder.show();
-            }
-        }
-    });
-
-    $('body').on('click touchstart','.has-placeholder label',function(){
-        var placeholder = $(this)
-        var thatInput  = $(this).parents('.has-placeholder').find('input, textarea');
-        if(thatInput.attr('disabled') != 'disabled'){
-            placeholder.hide();
-            thatInput.focus();
-        }
-    });
-
-    $('input[placeholder]').each(function(){
-      createPlaceHolder($(this));
-    });
-
-    $('body').on("created", '[name^="select_"]',function(evt) {
-        selectUi($(this));
-    });
-
-    $('select').each(function(){
-        selectUi($(this));
-    });
-
-    $('.flashmessage .ico-close').click(function(){
-        $(this).parents('.flashmessage').remove();
-    });
-    $('#mask_as_form select').on('change',function(){
-        $('#mask_as_form').submit();
-        $('#mask_as_form').submit();
-    });
-
-    if(typeof $.fancybox == 'function') {
-        $("a.fancybox").fancybox({
-            openEffect : 'none',
-            closeEffect : 'none',
-            nextEffect : 'fade',
-            prevEffect : 'fade',
-            loop : false,
-            helpers : {
-                title : {
-                    type : 'inside'
-                }
+          var css_id = "#visualization";
+        var data = [
+            {label: 'BMW 525D SE TOURING SILVER', data: [[1,700], [2,600], [3,400], [4,390], [5,300], [6,300], [7,300]]},
+            {label: 'SEAT Leon 1.6 TDI CR S 5dr (2010)', data: [[1,800], [2,600], [3,400], [4,400], [5,500], [6,400], [7,400]]},
+            {label: '2008 Scuderia Spider 16M', data: [[1,800], [2,200], [3,200], [4,200], [5,100], [6,50], [7,0]]}
+        ];
+        var options = {
+            series: {stack: 0,
+                     lines: {show: true, steps: false },
+                     bars: {show: false, barWidth: 0.9, align: 'center'}
             },
-            tpl: {
-                prev: '<a title="'+bender.fancybox_prev+'" class="fancybox-nav fancybox-prev"><span></span></a>',
-                next: '<a title="'+bender.fancybox_next+'" class="fancybox-nav fancybox-next"><span></span></a>',
-                closeBtn : '<a title="'+bender.fancybox_closeBtn+'" class="fancybox-item fancybox-close" href="javascript:;"></a>'
-            }
-        });
+            xaxis: {ticks: [[1,'Sun'], [2,'Mon'], [3,'Tue'], [4,'Wed'], [5,'Thu'], [6,'Fri'], [7,'Sat']]}
+        };
 
-        $(".main-photo").on('click', function(e) {
-            e.preventDefault();
-            $("a.fancybox").first().click();
-        });
-
-
+        $.plot($(css_id), data, options);
     }
+
+
+	//make text area bigger
+	var textarea_height = $('textarea.expand').height();
+    $('textarea.expand').focus(function () {
+        $(this).animate({ height: "400px" }, 500);
+    });    
+    $('textarea.expand').focusout(function () {
+        $(this).animate({ height: textarea_height }, 500);
+    });
+
+	//activate dropzone
+	if($("#my-dropzone").length > 0) {
+		//myDropzone = new Dropzone("#my-dropzone", {url: "test.php", autoProcessQueue:false});
+	}
+    
+    $(document)
+        .on('change', '.btn-file :file', function() {
+            $('#file-select').attr('src', 'css/images/loading.png');
+            var input = $(this),
+                numFiles = input.get(0).files ? input.get(0).files.length : 1,
+                label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+            input.trigger('fileselect', [numFiles, label, input]);
+    });
+
+    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+        readURL(event);
+    });
+    
+    //fancybox
+    $(".fancybox").fancybox({
+        prevEffect		: 'none',
+		nextEffect		: 'none',
+		closeBtn		: false,
+		helpers		: {
+			title	: { type : 'inside' },
+			buttons	: {}
+		}
+	});
+    
+    $(".fancybox-button").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		closeBtn		: false,
+		helpers		: {
+			title	: { type : 'inside' },
+			buttons	: {}
+		}
+	});
+    
+    $('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
+	});
+    
+    //for the dropdown regions box
+    $( "#regionsBtn" ).bind( "click", function() {
+        $('#myTab a:eq(0)').tab('show');
+        $('#regionsModal').modal({
+            keyboard: false
+        });
+        return false;
+    });
+    
+    $(document).click(function(event) { 
+        if($(event.target).parents().index($('#regionsModal')) == -1) {
+            if($('#regionsModal').is(":visible")) {
+                $('#regionsModal').modal('hide');
+            }
+        }        
+    });
+    
+    $('[data-toggle="tooltip"]').tooltip();
+    
+    //the login modals
+    $('#modalLogin').on('show.bs.modal', function () {
+        $('#modalSignup').modal('hide');
+    });
+    
+    $('#modalForgot').on('show.bs.modal', function () {
+        $('#modalLogin').modal('hide');
+    });
+
 });
+
+function readURL(event) {
+    var input = event.target;
+    console.log(input.files[0]);
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#file-select')
+                .attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}

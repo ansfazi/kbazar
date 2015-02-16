@@ -162,3 +162,7 @@ font-size:18px !important;
 #header #logo span {
 font-size: 18px !important !important;
 }
+
+#header{
+    background:#333;
+}

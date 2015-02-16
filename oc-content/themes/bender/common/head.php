@@ -31,6 +31,8 @@
     osc_register_script('global-theme-js', osc_current_web_theme_js_url('global.js'), 'jquery');
     osc_register_script('delete-user-js', osc_current_web_theme_js_url('delete_user.js'), 'jquery-ui');
     osc_enqueue_script('global-theme-js');
+    osc_register_script('bootstrap-theme-js', osc_current_web_theme_js_url('bootstrap.js'), 'jquery');
+    osc_enqueue_script('bootstrap-theme-js');
 ?>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
@@ -64,6 +66,8 @@
 <!-- /favicon -->
 
 <link href="<?php echo osc_current_web_theme_url('js/jquery-ui/jquery-ui-1.10.2.custom.min.css') ; ?>" rel="stylesheet" type="text/css" />
+<link href="<?php echo osc_current_web_theme_url('css/bootstrap.css') ; ?>" rel="stylesheet" type="text/css" />
+<link href="<?php echo osc_current_web_theme_url('css/k-style.css') ; ?>" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript">
     var bender = window.bender || {};
