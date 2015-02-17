@@ -166,3 +166,23 @@ font-size: 18px !important !important;
 #header{
     background:#333;
 }
+
+.navbar-brand img{
+    height:30px;
+}
+
+#sCategory{
+    width: 200px;
+    background: #f8f8f8;
+    border: none;
+    height: 45px;
+    padding-left: 10px;
+}
+
+.home-search .form-control{
+    padding:23px 8px;
+}
+
+.widget-box{
+    background: none !important;
+}

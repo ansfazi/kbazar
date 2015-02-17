@@ -40,7 +40,7 @@
 
             <div class="navbar-brand ">
                 <?php echo logo_header(); ?>
-                <span id="description"><?php echo osc_page_description(); ?></span>
+<!--                <span id="description"><?php //echo osc_page_description(); ?></span>-->
             </div>
         </div>
 
@@ -50,7 +50,7 @@
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="my_account.html">Login</a></li>
                 <li><a href="register.php">Register</a></li>
-                <li><a href="listing.php">Listings</a></li>
+                <!--<li><a href="listing.php">Listings</a></li>-->
                 <li><a href="account_ad_create.html">Post an ad</a></li>
             </ul> 
             <div class="nav navbar-nav navbar-right hidden-xs">
@@ -60,8 +60,8 @@
 
 
                         <a data-toggle="modal" data-target="#modalLogin" href="#">Login</a> | 
-                        <a href="register.html">Register</a> | 
-                        <a href="listings.html">Listings</a> 
+                        <a href="register.html">Register</a> 
+                        <!--<a href="listings.html">Listings</a>--> 
                         <a href="account_ad_create.html" class="btn btn-default post-ad-btn">Post an ad</a>
 
                     </div>	
@@ -146,81 +146,13 @@
 <?php osc_show_widgets('header'); ?>
          <?php */ ?>
         
-    
-    <div class="jumbotron home-search" style="">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <br>
-                <p class="main_description">Search thousands of stores, brands, products and user classifieds all in one place</p>
-
-                <br><br>
-                <div class="row">
-
-                    <div class="col-sm-8 col-sm-offset-2" style="text-align: center">
-                        <div class="row">
-
-                            <div class="col-sm-10 col-sm-offset-1">
-                                <div class="input-group">
-                                    <span class="input-group-addon input-group-addon-text">Find me a</span>
-
-                                    <input class="form-control col-sm-3" placeholder="e.g. BMW, 2 bed flat, sofa " type="text">
-                                    <div class=" input-group-addon hidden-xs">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">
-                                                All categories <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Cars, Vans &amp; Motorbikes</a></li>
-                                                <li><a href="#">Community</a></li>
-                                                <li><a href="#">Flats &amp; Houses</a></li>
-                                                <li><a href="#">For Sale</a></li>
-                                                <li><a href="#">Jobs</a></li>
-                                                <li><a href="#">Pets</a></li>
-                                                <li><a href="#">Services</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-sm-12" style="text-align: center">
-                        <a href="listings.html" class="btn btn-primary search-btn">Search</a>
-                    </div>
-                </div>                
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-sm-12" style="text-align: center">
-
-                        <div id="quotes">
-                            <div class="text-item" style="display: none;">Boom! <strong>Vince</strong> just sold a <strong>Washing Machine</strong> in <strong>Sheffield</strong></div>
-                            <div class="text-item" style="display: none;"><strong>Julia</strong> is availiable for <strong>home cleaning</strong> in <strong>Manchester</strong></div>
-                            <div class="text-item" style="display: block;">Success! <strong>Paul</strong> has just sold a <strong>Mercedes-Benz E-class</strong> in <strong>Liverpool</strong></div>
-                            <div class="text-item" style="display: none;">Hey, <strong>Uber</strong> has a <strong>job opening</strong> in <strong>London</strong></div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    
-    
-    
+    <?php 
+        if (osc_is_home_page() || osc_is_static_page() || osc_is_contact_page()) {
+            include("home-search.php");
+        } else {
+            include("listing-search.php");
+        }
+    ?>
     
 <div class="wrapper wrapper-flash">
     <?php
