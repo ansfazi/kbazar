@@ -48,7 +48,7 @@
                                     <div class="col-sm-4 col-xs-3" style="text-align: center">
                                         <div class="row">
                                             <div class="col-sm-11 pull-right">
-                                                <button class="btn btn-primary search-btn"><i class="icon-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;Search</button>
+                                                <button class="btn btn-primary search-btn"><i class="icon-search"></i><i class="fa fa-search fa-2"></i>&nbsp;Search</button>
                                             </div>
                                         </div>
                                     </div>

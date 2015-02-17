@@ -186,3 +186,7 @@ font-size: 18px !important !important;
 .widget-box{
     background: none !important;
 }
+
+.jumbotron {
+    padding-top: 15px !important;
+}

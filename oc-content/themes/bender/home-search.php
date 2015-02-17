@@ -58,7 +58,7 @@
                 <br>
                 <div class="row">
                     <div class="col-sm-12" style="text-align: center">
-                        <button type="submit" class="btn btn-primary search-btn">Search</button>
+                        <button type="submit" class="btn btn-primary search-btn"><i class="fa fa-search fa-2"></i>&nbsp;Search</button>
                     </div>
                 </div>
                     

@@ -1,4 +1,4 @@
 .htaccess
 config.php
 content/upload/*
-/nbproject/private/
+/nbproject/*
