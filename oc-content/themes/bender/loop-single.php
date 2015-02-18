@@ -21,7 +21,7 @@
 ?>
 
 <?php $size = explode('x', osc_thumbnail_dimensions()); ?>
-<li class="listing-card <?php echo $class; if(osc_item_is_premium()){ echo ' premium'; } ?>">
+<li class="listing-card <?php echo $class; if(osc_item_is_premium()){ echo ' premium'; } ?>" onclick="javascript:window.location.href='<?php echo osc_item_url() ; ?>'">
     <?php if( osc_images_enabled_at_items() ) { ?>
         <?php if(osc_count_item_resources()) { ?>
     <a class="listing-thumb" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_esc_html(osc_item_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>"></a>
@@ -33,10 +33,13 @@
         <div class="listing-cell">
             <div class="listing-data">
                 <div class="listing-basicinfo">
+                    <div class="title"><?php echo osc_item_title() ; ?></div>
+                    <?php /* ?>
                     <a href="<?php echo osc_item_url() ; ?>" class="title" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><?php echo osc_item_title() ; ?></a>
+                    <?php */ ?>
                     <div class="listing-attributes">
                         <span class="category"><?php echo osc_item_category() ; ?></span> -
-                        <span class="location"><?php echo osc_item_city(); ?> <?php if( osc_item_region()!='' ) { ?> (<?php echo osc_item_region(); ?>)<?php } ?></span> <span class="g-hide">-</span> <?php echo osc_format_date(osc_item_pub_date()); ?>
+                        <span class="location"><?php echo osc_item_city(); ?> <?php if( osc_item_region()!='' ) { ?> (<?php echo osc_item_region(); ?>)<?php } ?></span> <span class="g-hide">-</span> <span class="g-ad-date"><?php echo osc_format_date(osc_item_pub_date()); ?></span>
                         <?php if( osc_price_enabled_at_items() ) { ?><span class="currency-value"><?php echo osc_format_price(osc_item_price()); ?></span><?php } ?>
                     </div>
                     <p><?php echo osc_highlight( osc_item_description() ,250) ; ?></p>

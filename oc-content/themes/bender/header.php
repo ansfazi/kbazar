@@ -147,7 +147,8 @@
          <?php */ ?>
         
     <?php 
-        if (osc_is_home_page() || osc_is_static_page() || osc_is_contact_page()) {
+//    || osc_is_static_page() || osc_is_contact_page()
+        if (osc_is_home_page()) {
             include("home-search.php");
         } else {
             include("listing-search.php");

@@ -36,9 +36,9 @@ if(View::newInstance()->_exists('listClass')){
 
         if($type == 'latestItems'){
             while ( osc_has_latest_items() ) {
-                $class = '';
+                $class = 'col-sm-4';
                 if($i%3 == 0){
-                    $class = 'first';
+//                    $class = 'first';
                 }
                 bender_draw_item($class);
                 $i++;

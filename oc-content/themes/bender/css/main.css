@@ -795,7 +795,7 @@ padding:0;
 
 h1,h2,h3,h4,h5 {
 font-weight:700;
-font-family:Osclass;
+/*font-family:Osclass;*/
 color:#666;
 letter-spacing:-.03em;
 line-height:1em;

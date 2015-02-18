@@ -50,9 +50,13 @@
                 <a href="<?php echo osc_item_post_url_in_category(); ?>"><?php _e("Publish your ad for free", 'bender');?></a>
             </li>
             <?php } ?>
+             <li>
+                <a href="<?php echo osc_contact_url(); ?>"><?php _e('Contact', 'bender'); ?></a>
+            </li>
         </ul>
+        
+        <?php /*
         <ul>
-        <?php
         osc_reset_static_pages();
         while( osc_has_static_pages() ) { ?>
             <li>
@@ -65,6 +69,8 @@
                 <a href="<?php echo osc_contact_url(); ?>"><?php _e('Contact', 'bender'); ?></a>
             </li>
         </ul>
+        */ ?>
+        
         <?php
         if( osc_get_preference('footer_link', 'bender_theme') !== '0') {
             echo '<div>' . sprintf(__('This website is proudly using the <a title="Osclass web" href="%s">classifieds scripts</a> software <strong>Osclass</strong>'), 'http://osclass.org/') . '</div>';
@@ -82,4 +88,5 @@
     </div>
 </div>
 <?php osc_run_hook('footer'); ?>
-</body></html>
+</body>
+</html>

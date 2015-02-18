@@ -1,22 +1,19 @@
-.listing-card .listing-attributes {
-    font-size: 12px;
-    color: #777;
-    padding: 4px 0 8px;
-    line-height: 1em
+
+/*.wrapper{
+    width:80% !important;
+    min-width:980px;
 }
-.listing-card .currency-value {
-    margin-top: 5px;
+
+#main{
+    width:70% !important;
+    min-width:680px;
 }
-.listing-grid .listing-card {
-    min-height: 265px;
-    -webkit-transition: border 500ms ease-out;
-    -moz-transition: border 500ms ease-out;
-    -o-transition: border 500ms ease-out;
-    transition: border 500ms ease-out;
-}
-.listing-grid .listing-card:hover {
-    border: 1px solid #35c3d9;
-}
+
+#sidebar{
+    width:30% !important;
+    min-width:300px;
+}*/
+
 ul.r-list li a, ul.r-list li span {
     font-size: 12px;
 }
@@ -160,7 +157,7 @@ font-size:18px !important;
 }
 
 #header #logo span {
-font-size: 18px !important !important;
+font-size: 18px !important;
 }
 
 #header{
@@ -189,4 +186,80 @@ font-size: 18px !important !important;
 
 .jumbotron {
     padding-top: 15px !important;
+}
+
+/*** Main page Listing of latest ads ***/
+
+.listing-grid .listing-card {
+    min-height: 265px;
+    -webkit-transition: 500ms ease-in-out;
+    -moz-transition: 500ms ease-in-out;
+    -o-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+    /*border:none !important;*/
+    border-radius: 2px;
+    width:204px;
+    height: 330px;
+    position:relative;
+    padding:0px; 
+    /*background: #f4f3f2;*/
+}
+.listing-card .currency-value{
+    right:10px;
+}
+
+.listing-card .currency-value , .listing-grid .g-ad-date{
+    position:absolute;
+    bottom:10px;
+}
+
+.listing-grid .g-ad-date{
+    left:10px;
+}
+
+.listing-grid .listing-card:hover {
+    /*border:1px transparent !important;*/
+    /*border:none !important;*/    
+    border: 1px solid #35c3d9;
+    -webkit-box-shadow: 0px 0px 5px #888888;
+    -moz-box-shadow: 0px 0px 5px #888888;
+    box-shadow: 0px 0px 5px #888888;
+    border-radius: 2px;
+    /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);*/
+}
+
+.listing-grid .listing-basicinfo .title {
+    font-size: 16px ;
+    white-space: normal ;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 6px;
+    padding-top: 8px;
+    clear: both;
+}
+
+.listing-card .listing-attributes {
+    font-size: 12px;
+    color: #777;
+    padding: 4px 0 8px;
+    line-height: 1em
+}
+.listing-card .currency-value {
+    margin-top: 5px;
+}
+.listing-grid .listing-detail{
+    padding:10px;
+    cursor: pointer;
+}
+
+body.search .listing-grid .listing-card {
+    width:175px
+}
+
+
+/*** Footer ***/
+#footer{
+    /*border-top: 1px solid #E5E5E5;*/
+    background: #F7F7F7;
+    color: #777777;
 }
