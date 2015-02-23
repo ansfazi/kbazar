@@ -26,14 +26,16 @@
             <input type="hidden" name="as" value="spam" />
             <input type="hidden" name="action" value="mark" />
             <input type="hidden" name="page" value="item" />
-            <select name="as" id="as" class="mark_as">
-                    <option><?php _e("Mark as...", 'bender'); ?></option>
-                    <option value="spam"><?php _e("Mark as spam", 'bender'); ?></option>
-                    <option value="badcat"><?php _e("Mark as misclassified", 'bender'); ?></option>
-                    <option value="repeated"><?php _e("Mark as duplicated", 'bender'); ?></option>
-                    <option value="expired"><?php _e("Mark as expired", 'bender'); ?></option>
-                    <option value="offensive"><?php _e("Mark as offensive", 'bender'); ?></option>
-            </select>
+            <?php /* ?>
+                <select name="as" id="as" class="mark_as">
+                        <option><?php _e("Mark as...", 'bender'); ?></option>
+                        <option value="spam"><?php _e("Mark as spam", 'bender'); ?></option>
+                        <option value="badcat"><?php _e("Mark as misclassified", 'bender'); ?></option>
+                        <option value="repeated"><?php _e("Mark as duplicated", 'bender'); ?></option>
+                        <option value="expired"><?php _e("Mark as expired", 'bender'); ?></option>
+                        <option value="offensive"><?php _e("Mark as offensive", 'bender'); ?></option>
+                </select>
+            <?php */ ?>
         </form>
     <?php } ?>
 
