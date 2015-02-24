@@ -72,6 +72,6 @@ $(document).ready(function(){
                 <?php AlertForm::email_text(); ?>
 
             <?php }; ?>
-            <button type="submit" class="sub_button" ><?php _e('Subscribe now', 'bender'); ?>!</button>
+            <button type="submit" class="btn btn-primary" ><?php _e('Subscribe now', 'bender'); ?>!</button>
     </form>
 </div>

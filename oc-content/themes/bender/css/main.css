@@ -1455,7 +1455,7 @@ padding:0 5px;
 #sidebar .two_input input {
 width:70px;
 }
-
+/*
 #sidebar button {
 background-color:#35c3d9;
 background-image:linear-gradient(top,#35c3d9,#18a7be);
@@ -1473,7 +1473,7 @@ text-shadow:0 1px 0 rgba(0,0,0,0.3);
 line-height:30px;
 font-size:.85em;
 padding:0 15px;
-}
+}*/
 
 #sidebar .actions {
 padding:20px 0;

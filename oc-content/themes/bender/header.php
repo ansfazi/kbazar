@@ -62,7 +62,7 @@
                         <a data-toggle="modal" data-target="#modalLogin" href="#">Login</a> | 
                         <a href="register.html">Register</a> 
                         <!--<a href="listings.html">Listings</a>--> 
-                        <a href="account_ad_create.html" class="btn btn-warning post-ad-btn">Post an ad</a>
+                        <a href="<?php echo osc_item_post_url_in_category() ; ?>" class="btn btn-warning post-ad-btn">Post an ad</a>
 
                     </div>	
                 </div>

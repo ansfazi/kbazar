@@ -256,7 +256,49 @@ body.search .listing-grid .listing-card {
     width:175px
 }
 
+/*** Side Bar ***/
 
+body.search #sidebar, body.user #sidebar{
+    width:240px !important;
+}
+
+#sidebar .filters .row{
+    margin-left:0px !important;
+    margin-right:0px !important;
+}
+#sidebar .input-text, #sidebar input[type="text"] , form[name="contact_form"] input[type="text"], form[name="contact_form"] textarea, #item-post  input[type="text"]{
+    border-radius:0px !important;
+    box-shadow: none !important;
+}
+#item-post select{
+    padding: 6px;
+    width: 280px;
+    border: 1px solid #bfbfbf;
+}
+
+#item-post .control-label{
+    font-size: 12px !important;
+}
+
+form[name="contact_form"] textarea{
+    resize: vertical;
+}
+
+#sidebar .search-btn{
+    padding: 8px;
+    font-size: 12px;
+    width: 100%;
+}
+
+.see_by{
+    height: 28px !important;
+}
+
+/*** Contact Us fomr ***/
+
+form[name="contact_form"]{
+    padding:10px 100px 10px 100px;
+}
 /*** Footer ***/
 #footer{
     /*border-top: 1px solid #E5E5E5;*/

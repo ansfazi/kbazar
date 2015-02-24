@@ -81,7 +81,7 @@
             <input type="hidden" name="sCategory[]" value="<?php echo osc_esc_html($cat_id); ?>"/>
         <?php } ?>
         <div class="actions">
-            <button type="submit"><?php _e('Apply', 'bender') ; ?></button>
+            <button type="submit" class="btn btn-primary search-btn"><?php _e('Search', 'bender') ; ?></button>
         </div>
     </form>
     <fieldset>
