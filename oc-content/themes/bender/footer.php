@@ -55,21 +55,20 @@
             </li>
         </ul>
         
-        <?php /*
+        <?php /* ?>
         <ul>
+        <?php 
         osc_reset_static_pages();
         while( osc_has_static_pages() ) { ?>
             <li>
                 <a href="<?php echo osc_static_page_url(); ?>"><?php echo osc_static_page_title(); ?></a>
             </li>
-        <?php
-        }
-        ?>
+        <?php } ?>
             <li>
                 <a href="<?php echo osc_contact_url(); ?>"><?php _e('Contact', 'bender'); ?></a>
             </li>
         </ul>
-        */ ?>
+        <?php */ ?>
         
         <?php
         if( osc_get_preference('footer_link', 'bender_theme') !== '0') {

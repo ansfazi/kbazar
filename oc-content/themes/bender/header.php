@@ -23,6 +23,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="<?php echo str_replace('_', '-', osc_current_user_locale()); ?>">
     <head>
         <?php osc_current_web_theme_path('common/head.php') ; ?>
+        <?php include_once("analyticstracking.php") ?>
     </head>
 <body <?php bender_body_class(); ?>>
     
@@ -48,8 +49,8 @@
 
             <ul class="nav navbar-nav navbar-right visible-xs">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="my_account.html">Login</a></li>
-                <li><a href="register.php">Register</a></li>
+                <li><a href="<?php echo osc_user_login_url(); ?>">Login</a></li>
+                <li><a href="<?php echo osc_register_account_url() ; ?>">Register for a free account</a></li>
                 <!--<li><a href="listing.php">Listings</a></li>-->
                 <li><a href="account_ad_create.html">Post an ad</a></li>
             </ul> 
@@ -60,7 +61,7 @@
 
 
                         <a data-toggle="modal" data-target="#modalLogin" href="#">Login</a> | 
-                        <a href="register.html">Register</a> 
+                        <a href="<?php echo osc_register_account_url() ; ?>">Register</a> 
                         <!--<a href="listings.html">Listings</a>--> 
                         <a href="<?php echo osc_item_post_url_in_category() ; ?>" class="btn btn-warning post-ad-btn">Post an ad</a>
 

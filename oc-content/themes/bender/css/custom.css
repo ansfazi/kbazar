@@ -266,7 +266,7 @@ body.search #sidebar, body.user #sidebar{
     margin-left:0px !important;
     margin-right:0px !important;
 }
-#sidebar .input-text, #sidebar input[type="text"] , form[name="contact_form"] input[type="text"], form[name="contact_form"] textarea, #item-post  input[type="text"]{
+#sidebar .input-text, #sidebar input[type="text"] , .form-container .resp-wrapper form input, .form-container .resp-wrapper form textarea, #item-post  input[type="text"]{
     border-radius:0px !important;
     box-shadow: none !important;
 }
@@ -280,7 +280,7 @@ body.search #sidebar, body.user #sidebar{
     font-size: 12px !important;
 }
 
-form[name="contact_form"] textarea{
+.form-container .resp-wrapper form textarea{
     resize: vertical;
 }
 
@@ -296,7 +296,7 @@ form[name="contact_form"] textarea{
 
 /*** Contact Us fomr ***/
 
-form[name="contact_form"]{
+.form-container .resp-wrapper form{
     padding:10px 100px 10px 100px;
 }
 /*** Footer ***/
