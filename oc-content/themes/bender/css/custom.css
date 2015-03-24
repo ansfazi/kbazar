@@ -165,7 +165,8 @@ font-size: 18px !important;
 }
 
 .navbar-brand img{
-    height:30px;
+    height: 60px;
+	margin-top: -25px;
 }
 
 #sCategory{
