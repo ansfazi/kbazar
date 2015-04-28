@@ -150,25 +150,29 @@
     <?php 
 //    || osc_is_static_page() || osc_is_contact_page()
         if (osc_is_home_page()) {
-            include("home-search.php");
+            //include("home-search.php");
+            include("listing-search.php");
         } else {
             include("listing-search.php");
         }
     ?>
-    
-<div class="wrapper wrapper-flash">
-    <?php
-        $breadcrumb = osc_breadcrumb('&raquo;', false, get_breadcrumb_lang());
-        if( $breadcrumb !== '') { ?>
-        <div class="breadcrumb">
-            <?php echo $breadcrumb; ?>
-            <div class="clear"></div>
+  
+    <?php if (! osc_is_home_page()) { ?>
+        <div class="wrapper wrapper-flash">
+            <?php
+                $breadcrumb = osc_breadcrumb('&raquo;', false, get_breadcrumb_lang());
+                if( $breadcrumb !== '') { ?>
+                <div class="breadcrumb">
+                    <?php echo $breadcrumb; ?>
+                    <div class="clear"></div>
+                </div>
+            <?php
+                }
+            ?>
+            <?php osc_show_flash_message(); ?>
         </div>
-    <?php
-        }
-    ?>
-    <?php osc_show_flash_message(); ?>
-</div>
+    <?php } ?>
+    
 <?php osc_run_hook('before-content'); ?>
 <div class="wrapper" id="content">
     <?php osc_run_hook('before-main'); ?>

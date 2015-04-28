@@ -47,9 +47,9 @@ ul.r-list li ul li {
 ul.r-list li ul li a {
 	display:table-cell;
     font-size: 13px;
-	height: 80px;
-	vertical-align: middle;
-	width: 117px;
+	height: 140px;
+	vertical-align: top;
+        width: 117px;
     word-wrap: normal;
     display: table-cell;
     text-align: center;
@@ -295,7 +295,47 @@ body.search #sidebar, body.user #sidebar{
     height: 28px !important;
 }
 
-/*** Contact Us fomr ***/
+.category .fa{
+    font-size: 40px;
+}
+
+.listing-card{
+    cursor: pointer;
+}
+
+.premiums-list-item-zb.premium{
+    -webkit-transition: background-color 0.5s ease !important;
+    background-color: #FFF !important;
+}
+
+.premiums-list-item-zb.premium:hover{
+    background-color: #f3f3f4 !important;
+}
+.premium-container-zb{
+    margin-top: 30px;
+}
+
+.premiums-list-item-zb p{
+    display: none;
+}
+
+#sidebar .premium-list li.listing-card, #sidebar li.listing-card.premium{
+    background: #FFF;
+}
+
+#sidebar div, #sidebar .listing-basicinfo > a{
+    width: 195px !important;
+}
+
+#sidebar .listing-basicinfo > a{
+/*    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis; 
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -webkit-overflow: ellipsis;*/
+}
+/*** Contact Us form ***/
 
 .form-container .resp-wrapper form{
     padding:10px 100px 10px 100px;

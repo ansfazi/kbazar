@@ -29,19 +29,21 @@ if(View::newInstance()->_exists('listType')){
 if(View::newInstance()->_exists('listClass')){
     $loopClass = View::newInstance()->_get('listClass');
 }
+
 ?>
 <ul class="listing-card-list <?php echo $loopClass; ?>" id="listing-card-list">
     <?php
         $i = 0;
-
         if($type == 'latestItems'){
             while ( osc_has_latest_items() ) {
-                $class = 'col-sm-4';
-                if($i%3 == 0){
-//                    $class = 'first';
+                if(!osc_item_is_premium()){
+                    $class = 'col-sm-4';
+                    if($i%3 == 0){
+                        //$class = 'first';
+                    }
+                    bender_draw_item($class);
+                    $i++;
                 }
-                bender_draw_item($class);
-                $i++;
             }
         } elseif($type == 'premiums'){
             while ( osc_has_premiums() ) {
