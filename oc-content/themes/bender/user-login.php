@@ -51,7 +51,7 @@
                     <?php UserForm::rememberme_login_checkbox();?> <label for="remember"><?php _e('Remember me', 'bender'); ?></label>
                 </div>
                 <div class="controls">
-                    <button type="submit" class="ui-button ui-button-middle ui-button-main"><?php _e("Log in", 'bender');?></button>
+                    <button type="submit" class="btn btn-primary search-btn"><?php _e("Log in", 'bender');?></button>
                 </div>
             </div>
             <div class="actions">

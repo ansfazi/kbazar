@@ -60,7 +60,7 @@
                     <div class="pull-right">
 
 
-                        <a data-toggle="modal" data-target="#modalLogin" href="#">Login</a> | 
+                        <a data-toggle="modal" data-target="#modalLogin" href="<?php echo osc_user_login_url() ; ?>">Login</a> | 
                         <a href="<?php echo osc_register_account_url() ; ?>">Register</a> 
                         <!--<a href="listings.html">Listings</a>--> 
                         <a href="<?php echo osc_item_post_url_in_category() ; ?>" class="btn btn-warning post-ad-btn">Post an ad</a>

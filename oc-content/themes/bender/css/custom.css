@@ -335,6 +335,11 @@ body.search #sidebar, body.user #sidebar{
     -ms-text-overflow: ellipsis;
     -webkit-overflow: ellipsis;*/
 }
+
+.form-horizontal .controls{
+    line-height: 8px;    
+}
+
 /*** Contact Us form ***/
 
 .form-container .resp-wrapper form{

@@ -73,7 +73,6 @@
         
         <?php 
          osc_query_item(array("premium"=>"1", "results_per_page"=>5));
-        //osc_query_item("region_name=Madrid");
 if( osc_count_custom_items() == 0) { ?>
     <p class="empty"><?php _e('No Listings', 'modern') ; ?></p>
 <?php } else { ?>
